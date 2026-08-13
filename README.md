@@ -1,4 +1,4 @@
-Cloud Computing Laboratory
+
 Cloud Computing Laboratory
 Student name:Doan Quoc Tien
 Student ID:237212
