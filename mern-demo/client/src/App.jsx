@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 
 function App() {
   const [students, setStudents] = useState([]);
   const [form, setForm] = useState({ studentId: '', name: '', email: '' });
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = 'https://effective-acorn-q7wxwv9xwq74c4vxq-5000.app.github.dev/api/students';
+  const API_URL = '/api/students';
 
   const loadStudents = () => {
     fetch(API_URL)
@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h1>Quản lý sinh viên 2.0</h1>
+      <h1>Phiên bản 2.0 - Production Cloud PaaS (Auto-Deployed)</h1>
       <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
         <input 
           placeholder="MSSV" 
