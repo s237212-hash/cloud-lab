@@ -1,11 +1,12 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
   const [students, setStudents] = useState([]);
   const [form, setForm] = useState({ studentId: '', name: '', email: '' });
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = '/api/students';
+  const API_BASE = import.meta.env.VITE_API_URL || '';
+  const API_URL = API_BASE ? `${API_BASE}/api/students` : '/api/students';
 
   const loadStudents = () => {
     fetch(API_URL)
